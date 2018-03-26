@@ -61,6 +61,7 @@ class Song
 def self.create_from_filename(file)
   song = new_from_filename(file)
   @@all << song
+  song
 end
 
   def self.destroy_all
