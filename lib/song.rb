@@ -39,6 +39,17 @@ class Song
 
   end
 
+  def self.alphabetical
+    @@all.sort do |a,b|
+      if a.name == b.name
+        0
+      elsif a.name > b.name
+        1
+      else
+        -1
+      end
+    end
+  end
 
 
 
