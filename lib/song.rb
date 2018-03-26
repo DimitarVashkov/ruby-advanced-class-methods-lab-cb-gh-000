@@ -53,8 +53,9 @@ class Song
 
   def self.new_from_filename(file)
     properties = file.split('-')
-    song = new_by_name
-    
+    song = new_by_name(properties[1].sub(/.mp3/,''))
+    song.artist_name = properties[0].chomp()
+
   end
 
 
