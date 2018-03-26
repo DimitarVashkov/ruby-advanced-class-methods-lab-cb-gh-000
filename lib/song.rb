@@ -51,6 +51,12 @@ class Song
     end
   end
 
+  def self.new_from_filename(file)
+    properties = file.split('-')
+    song = new_by_name
+    
+  end
+
 
   def self.destroy_all
     @@all = []
