@@ -56,9 +56,12 @@ class Song
     song = new_by_name(properties[1].strip().sub(/.mp3/,''))
     song.artist_name = properties[0].strip()
     song
-
   end
 
+def self.create_from_filename(file)
+  song = new_from_filename(file)
+  @@all << song
+end
 
   def self.destroy_all
     @@all = []
