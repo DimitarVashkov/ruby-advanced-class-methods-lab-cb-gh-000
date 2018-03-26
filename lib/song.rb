@@ -29,6 +29,18 @@ class Song
     @@all.detect {|x| x.name == name}
   end
 
+  def self.find_or_create_by_name(name)
+    result = @@all.detect {|x| x.name == name}
+    if result
+      return result
+    else
+      result = create_by_name(name)
+    end
+
+  end
+
+
+
 
   def save
     self.class.all << self
