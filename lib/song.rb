@@ -30,7 +30,7 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    result = @@all.detect {|x| x.name == name}
+    result = find_by_name
     if result
       result
     else
